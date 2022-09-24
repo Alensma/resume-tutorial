@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightblue;
+}
+.container{
+    position: relative;
+    max-width: 1000px;
+    min-height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+}
+.left-side{
+    padding: 40px;
+    position: relative;
+    background-color: #003147;
+}
+.right-side{
+    padding: 40px;
+    background-color: #fff;
+}
+#add-img, #image-input{
+  opacity: 0;
+}
+
+.image-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.image-container p{
+    margin: 0 auto;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#addimg-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 3rem;
+    object-fit: cover;
+    position: relative;
+}
+.container img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.control > button{
+    background-color: #0a5e85;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 5px;
+    width: 10vw;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button-style{
+    transform: translateX(2rem);
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #0a5e85;
+    padding: 1rem;
+}
+.resume-form{
+    margin-top: 2rem;
+}
+
+input:invalid{
+    animation: shake .3s;
+}
+.line1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.name{
+    position: relative;
+}
+.name input{
+    border: none;
+    border-bottom: 1px solid #0a5e85;
+    padding-bottom: 0.6rem;
+    outline: none;
+    background: transparent;
+}
+.name input :focus~label,
+.name input:valid~label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+
+}
+input:invalid{
+    animation: shake .3s;
+}
+
+@keyframes shake{
+    25%{transform: translateX(4px);}
+    50%{transform: translateX(-4px);}
+    75%{transform: translateX(4px);}
+}
+.line1 label{
+   font-family: Arial, Helvetica, sans-serif;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: .5s;
+   color: black;
+   opacity: 0.3;
+   pointer-events: none;
+}
+
+
+.line2{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mail{
+    position: relative;
+}
+.mail input{
+    border: none;
+    border-bottom: 1px solid #0a5e85;
+    padding-bottom: 0.6rem;
+    outline: none;
+    background: transparent;
+}
+
+.line2 label{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    color: black;
+    opacity: 0.3;
+    pointer-events: none;
+ }
+ 
+.mail input :focus~label,
+.mail input:valid~label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+
+}
+
+
+.line3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+.city{
+    position: relative;
+}
+.city input{
+    border: none;
+    border-bottom: 1px solid #0a5e85;
+    padding-bottom: 0.6rem;
+    outline: none;
+    background: transparent;
+}
+
+.city label{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    color: black;
+    opacity: 0.3;
+    pointer-events: none;
+ }
+.city input :focus~label,
+.city input:valid~label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+
+}
+
+
+
+
+.line4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+.country{
+    position: relative;
+}
+.country input{
+    border: none;
+    border-bottom: 1px solid #0a5e85;
+    padding-bottom: 0.6rem;
+    outline: none;
+    background: transparent;
+}
+
+.country label{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    color: black;
+    opacity: 0.3;
+    pointer-events: none;
+ }
+.country input :focus~label,
+.country input:valid~label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+
+}
+
+
+
+
+.skill{
+    margin-top: 4rem;
+    position: relative;
+}
+
+.skill input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #0a5e85;
+    padding-bottom: 0.6rem;
+    outline: none;
+    background: transparent;
+}
+
+.skill label{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    color: black;
+    opacity: 0.3;
+    pointer-events: none;
+ }
+.skill input:focus~label,
+.skill input :valid~label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+
+}
+
+
+
+
+
+.job-experience{
+    margin-top: 4rem;
+    position: relative;
+}
+
+.job-experience input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #0a5e85;
+    padding-bottom: 0.6rem;
+    outline: none;
+    background: transparent;
+}
+
+.job-experience label{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    color: black;
+    opacity: 0.3;
+    pointer-events: none;
+ }
+.job-experience input:focus~label,
+.job-experience input :valid~label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+
+}
+.next-btn{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.next-btn > a> button{
+    background-color: #0a5e85;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.next-btn >a> button::before{
+    content: "";
+    background-color:#003147;
+    position: absolute;
+    top: 2rem;
+    left: 1.3rem;
+    width: 60%;
+    height: 100%;
+
+
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+}
+
+
+.month{
+    margin-top: 4rem;
+    position: relative;
+}
+
+.month input{
+    
+    border: none;
+    border-bottom: 1px solid #0a5e85;
+    padding-bottom: 0.6rem;
+    outline: none;
+    background: transparent;
+    
+}
+
+.month label{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    color: black;
+    opacity: 0.3;
+    pointer-events: none;
+ }
+.month input:focus~label,
+.month input :valid~label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+
+}
+
+/* Responsivenesss */
+
+/* Tablets and larger smartphines */
+@media screen  
+and (min-width :481px)
+and (max-width:768px ){
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+
+/* Smaller Smartphones */
+@media screen {
+    
+}

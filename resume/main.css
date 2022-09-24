@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   background-color: gainsboro;
+}
+.container{
+    position: relative;
+    max-width: 1000px;
+    min-height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+}
+.left-side{
+    background-color: gray;
+    padding: 40px;
+}
+.right-side{
+    background-color: #fff;
+    padding: 40px;
+}
